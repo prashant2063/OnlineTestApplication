@@ -1,6 +1,10 @@
 .container-fluid{
     height: 100vh;
 }
+.my-bg{
+    background-image: url(login.png);
+    background-size: cover;
+}
 .container-fluid > .row{
     align-content: center;
     height: 100%;

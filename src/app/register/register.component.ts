@@ -15,16 +15,16 @@ export class RegisterComponent implements OnInit {
 
   switchToLogin(){
     if(!this.open){
-      document.getElementById("register-form").classList.replace("d-block","d-none");
-      document.getElementById("login-form").classList.replace("d-none","d-block");
+      document.getElementById("sign-up-form").classList.replace("d-block","d-none");
+      document.getElementById("sign-in-form").classList.replace("d-none","d-block");
       this.open = true;
     }
   }
 
   switchToRegister(){
     if(this.open){
-      document.getElementById("login-form").classList.replace("d-block","d-none");
-      document.getElementById("register-form").classList.replace("d-none","d-block");
+      document.getElementById("sign-in-form").classList.replace("d-block","d-none");
+      document.getElementById("sign-up-form").classList.replace("d-none","d-block");
       this.open = false;
     }
   }
