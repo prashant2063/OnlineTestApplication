@@ -1,0 +1,7 @@
+.container-fluid{
+    height: 100vh;
+}
+.container-fluid > .row{
+    align-content: center;
+    height: 100%;
+}
