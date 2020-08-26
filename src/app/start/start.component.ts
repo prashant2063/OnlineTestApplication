@@ -13,7 +13,7 @@ export class StartComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  startClickEventHandler(){
-    this.router.navigateByUrl("/test/"+0);
+  startBtnClickEventHandler(){
+    this.router.navigateByUrl("/test/"+1);
   }
 }

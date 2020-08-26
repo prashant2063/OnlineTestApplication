@@ -1,1 +1,25 @@
-<p>test works!</p>
+<div class="container-fluid min-vh-100 bg-info">
+    <div class="row min-vh-100">
+        <div class="col-md-12">
+            <div class="card m-5">
+                <div class="card-header">
+                    {{"Question "+currentQuestion}}
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">{{questionsArray[currentQuestion-1].question}}</h5>
+                    <div *ngFor="let option of questionsArray[currentQuestion-1].options; let i = index">
+                        <input type="radio" value="{{i}}" name="option" (change)="onAnswerChange($event.target.value)"> &nbsp; {{option}}
+                    </div>
+                </div>
+                <div class="card-footer text-right" *ngIf="currentQuestion < questionsArray.length; else finish">
+                    <button class="btn btn-primary" (click)="nextBtnClickEventHandler();">Next</button>
+                </div>
+                <ng-template #finish>
+                <div class="card-footer text-right">
+                    <button class="btn btn-primary" (click)="finishBtnClickEventHandler();">Finish</button>
+                </div>
+                </ng-template>
+            </div>
+        </div>
+    </div>
+</div>

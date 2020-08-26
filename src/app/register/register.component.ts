@@ -13,7 +13,7 @@ export class RegisterComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  loginClickEventHandler(){
+  loginBtnClickEventHandler(){
     this.router.navigateByUrl("/start");
   }
 }
