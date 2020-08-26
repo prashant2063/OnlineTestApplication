@@ -1,18 +1,24 @@
 <div class="container-fluid">
     <div class="row">
-        <div class="col-md-9 my-bg">
-
+        <div class="col-md-8 my-bg">
         </div>
-        <div class="col-md-3 h-100 p-3 bg-light">
-            
-                <div class="row">
-                    <div class="col-md-12">
+        <div class="col-md-4 h-100 p-3 bg-light">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="accordion" id="accordionExample">
                         <div class="card">
-                            <div class="btn btn-primary" (click)="switchToLogin()">
+                            <button class="btn btn-primary" type="button" data-toggle="collapse"
+                                data-target="#collapseOne">
                                 Sign in
-                            </div>
-                            <div class="d-block" id="sign-in-form">
+                            </button>
+                            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                                data-parent="#accordionExample">
                                 <div class="card-body">
+                                    <div class="row justify-content-around">
+                                        <a class="btn btn-primary"><i class="fa fa-google"></i> Sign in</a>
+                                        <a class="btn btn-primary"><i class="fa fa-linkedin"></i> Sign in</a>
+                                    </div>
+                                    <h5 class="text-center text-muted py-3">--or--</h5>
                                     <form>
                                         <div class="form-group">
                                             <label for="username">Username</label>
@@ -23,130 +29,55 @@
                                             <input id="password" class="form-control" type="password" name="password">
                                         </div>
                                         <div class="form-group text-right">
-                                            <input id="login" class="btn btn-primary" type="submit" name="login" value="Sign in">
+                                            <input id="loginBtn" class="btn btn-primary" type="button" name="login"
+                                                value="Sign in">
                                         </div>
                                     </form>
                                 </div>
-                                <div class="card-footer text-center">
-                                    <a class="btn btn-primary">Sign in with Google</a>
-                                </div>
-                            </div> 
+                            </div>
                         </div>
                         <div class="card">
-                            <div class="btn btn-primary" (click)="switchToRegister()">
+                            <button class="btn btn-primary collapsed" type="button" data-toggle="collapse"
+                                data-target="#collapseTwo">
                                 Sign up
-                            </div>
-                            <div class="d-none" id="sign-up-form">
-                                <div class="card-body" >
+                            </button>
+                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+                                data-parent="#accordionExample">
+                                <div class="card-body">
+                                    <div class="row justify-content-around">
+                                        <a class="btn btn-primary"><i class="fa fa-google"></i> Sign up</a>
+                                        <a class="btn btn-primary"><i class="fa fa-linkedin"></i> Sign up</a>
+                                    </div>
+                                    <h5 class="text-center text-muted py-3">--or--</h5>
                                     <form>
                                         <div class="form-group">
-                                                    <label for="name">Name</label>
-                                                    <input id="name" class="form-control" type="text" name="name">
+                                            <label for="name">Name</label>
+                                            <input id="name" class="form-control" type="text" name="name">
                                         </div>
                                         <div class="form-group">
-                                                    <label for="email">Email</label>
-                                                    <input id="email" class="form-control" type="email" name="email">
+                                            <label for="email">Email</label>
+                                            <input id="email" class="form-control" type="email" name="email">
                                         </div>
                                         <div class="form-group">
-                                                    <label for="password">Password</label>
-                                                    <input id="password" class="form-control" type="password" name="password">
+                                            <label for="password">Password</label>
+                                            <input id="password" class="form-control" type="password" name="password">
                                         </div>
                                         <div class="form-group">
-                                                    <label for="re-password">Confirm Password</label>
-                                                    <input id="re-password" class="form-control" type="password" name="re-password">
+                                            <label for="re-password">Confirm Password</label>
+                                            <input id="re-password" class="form-control" type="password"
+                                                name="re-password">
                                         </div>
                                         <div class="form-group text-right">
-                                            <input id="register" class="btn btn-primary" type="submit" name="register"
+                                            <input id="registerBtn" class="btn btn-primary" type="button" name="register"
                                                 value="Sign up">
                                         </div>
                                     </form>
                                 </div>
-                                <div class="card-footer text-center">
-                                    <a class="btn btn-primary">Signup with Google</a>
-                                </div>
                             </div>
                         </div>
                     </div>
-                    
-                    <!-- <div class="col-md-12">
-                        <div class="w-100 btn btn-primary border-right" id="login-btn" (click)="switchToLogin()">
-                            Login
-                        </div>
-                        <div class="card d-block" id="login-form">
-                            <div class="card-body">
-                                <form>
-                                    <div class="form-group">
-                                        <label for="username">Username</label>
-                                        <input id="username" class="form-control" type="text" name="username">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="password">Password</label>
-                                        <input id="password" class="form-control" type="password" name="password">
-                                    </div>
-                                    <div class="form-group text-right">
-                                        <input id="login" class="btn btn-primary" type="submit" name="login" value="Login">
-                                    </div>
-                                </form>
-                            </div>
-                            
-                        </div>
-                    </div>
-                    <div class="col-md-12 align-items-end">
-                        <div class="w-100 btn btn-primary border-left align-self-end" id="register-btn" (click)="switchToRegister()">
-                            Register
-                        </div>
-                        <div class="card d-none" id="register-form">
-                            <div class="card-body">
-                                <form>
-                                    <div class="form-group">
-                                        <div class="row">
-                                            <div class="col-md-4 col-sm-4">
-                                                <label for="name">Name</label>
-                                            </div>
-                                            <div class="col-md-8 col-sm-8">
-                                                <input id="name" class="form-control" type="text" name="name">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <div class="row">
-                                            <div class="col-md-4 col-sm-4">
-                                                <label for="email">Email</label>
-                                            </div>
-                                            <div class="col-md-8 col-sm-8">
-                                                <input id="email" class="form-control" type="email" name="email">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <div class="row">
-                                            <div class="col-md-4 col-sm-4">
-                                                <label for="password">Password</label>
-                                            </div>
-                                            <div class="col-md-8 col-sm-8">
-                                                <input id="password" class="form-control" type="password" name="password">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <div class="row">
-                                            <div class="col-md-4 col-sm-4">
-                                                <label for="re-password">Confirm Password</label>
-                                            </div>
-                                            <div class="col-md-8 col-sm-8">
-                                                <input id="re-password" class="form-control" type="password" name="re-password">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="form-group text-right">
-                                        <input id="register" class="btn btn-primary" type="submit" name="register"
-                                            value="Register">
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div> -->
                 </div>
+            </div>
         </div>
     </div>
 </div>

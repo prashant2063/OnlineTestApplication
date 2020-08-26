@@ -1,8 +1,8 @@
 .container-fluid{
-    height: 100vh;
+    height: 100vh !important;
 }
 .my-bg{
-    background-image: url(login.png);
+    background-image: url("../../assets/login-page.png");
     background-size: cover;
 }
 .container-fluid > .row{

@@ -13,19 +13,4 @@ export class RegisterComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  switchToLogin(){
-    if(!this.open){
-      document.getElementById("sign-up-form").classList.replace("d-block","d-none");
-      document.getElementById("sign-in-form").classList.replace("d-none","d-block");
-      this.open = true;
-    }
-  }
-
-  switchToRegister(){
-    if(this.open){
-      document.getElementById("sign-in-form").classList.replace("d-block","d-none");
-      document.getElementById("sign-up-form").classList.replace("d-none","d-block");
-      this.open = false;
-    }
-  }
 }
