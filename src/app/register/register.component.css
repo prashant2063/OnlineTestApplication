@@ -1,6 +1,3 @@
-.container-fluid{
-    height: 100vh !important;
-}
 .my-bg{
     background-image: url("../../assets/login-page.png");
     background-size: cover;

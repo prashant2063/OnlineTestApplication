@@ -1,4 +1,4 @@
-<div class="container-fluid">
+<div class="container-fluid vh-100">
     <div class="row">
         <div class="col-md-8 my-bg">
         </div>
@@ -29,8 +29,8 @@
                                             <input id="password" class="form-control" type="password" name="password">
                                         </div>
                                         <div class="form-group text-right">
-                                            <input id="loginBtn" class="btn btn-primary" type="button" name="login"
-                                                value="Sign in">
+                                            <input class="btn btn-primary" type="button" name="login"
+                                                value="Sign in" (click)="loginClickEventHandler();">
                                         </div>
                                     </form>
                                 </div>
@@ -68,7 +68,7 @@
                                                 name="re-password">
                                         </div>
                                         <div class="form-group text-right">
-                                            <input id="registerBtn" class="btn btn-primary" type="button" name="register"
+                                            <input class="btn btn-primary" type="button" name="register"
                                                 value="Sign up">
                                         </div>
                                     </form>
