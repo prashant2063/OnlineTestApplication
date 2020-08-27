@@ -8,8 +8,8 @@ import { FinishComponent } from './finish/finish.component';
 const routes: Routes = [
   {path:"login", component:RegisterComponent},
   {path:"start", component:StartComponent},
-  {path:"test/:questionNumber", component:TestComponent},
-  {path:"finish/:score/:maxScore", component:FinishComponent},
+  {path:"test", component:TestComponent},
+  {path:"finish", component:FinishComponent},
   {path:"",redirectTo:"/login",pathMatch:"full"},
   {path:"**",redirectTo:"/login",pathMatch:"full"}
 ];

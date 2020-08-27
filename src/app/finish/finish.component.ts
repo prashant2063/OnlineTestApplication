@@ -12,14 +12,14 @@ export class FinishComponent implements OnInit {
   maxScore:number;
   
   constructor(public activatedRoute: ActivatedRoute, public router: Router) { 
-    this.score = parseInt(this.activatedRoute.snapshot.paramMap.get('score'));
-    this.maxScore = parseInt(this.activatedRoute.snapshot.paramMap.get('maxScore'));
+    this.score = parseInt(history.state.score);
+    this.maxScore = parseInt(history.state.maxScore);
   }
 
   ngOnInit(): void {
   }
 
   leaveBtnClickEventHandler(){
-    this.router.navigateByUrl("");
+    this.router.navigateByUrl("/login");
   }
 }
