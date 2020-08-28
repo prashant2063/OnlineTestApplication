@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
+import { ManageTestService } from '../manage-test.service';
 
 @Component({
   selector: 'app-finish',
@@ -8,18 +9,19 @@ import { Router, ActivatedRoute } from '@angular/router';
 })
 export class FinishComponent implements OnInit {
 
-  score:number;
-  maxScore:number;
-  
-  constructor(public activatedRoute: ActivatedRoute, public router: Router) { 
-    this.score = parseInt(history.state.score);
-    this.maxScore = parseInt(history.state.maxScore);
+  score: number;
+  maxScore: number;
+
+  constructor(public router: Router, public manageTestService: ManageTestService) {
+    let obj: Object = this.manageTestService.calculateResult();
+    this.score = obj["score"];
+    this.maxScore = obj["maxScore"];
   }
 
   ngOnInit(): void {
   }
 
-  leaveBtnClickEventHandler(){
+  leaveBtnClickEventHandler() {
     this.router.navigateByUrl("/login");
   }
 }

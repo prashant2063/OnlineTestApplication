@@ -21,8 +21,7 @@ export class RegisterComponent implements OnInit {
     rePassword: new FormControl("",[Validators.required,Validators.minLength(8)])
   },{
     validators:matchPassword('password','rePassword')
-  }
-  );
+  });
   
   constructor(public router: Router) { }
 

@@ -14,6 +14,6 @@ export class StartComponent implements OnInit {
   }
 
   startBtnClickEventHandler(){
-    this.router.navigateByUrl("/test",{state:{questionNumber:1}});
+    this.router.navigateByUrl("/test");
   }
 }

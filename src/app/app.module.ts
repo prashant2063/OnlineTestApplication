@@ -8,6 +8,7 @@ import { RegisterComponent } from './register/register.component';
 import { StartComponent } from './start/start.component';
 import { TestComponent } from './test/test.component';
 import { FinishComponent } from './finish/finish.component';
+import { ManageTestService } from './manage-test.service';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,9 @@ import { FinishComponent } from './finish/finish.component';
     AppRoutingModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [
+    ManageTestService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,5 +1,5 @@
 export class Question {
-    constructor(public question, public options: string[], public correct: number){
+    constructor(public qId: number ,public question: string, public options: string[], public correct: string){
         
     }
 }

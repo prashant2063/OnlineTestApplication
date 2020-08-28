@@ -3,24 +3,27 @@
         <div class="offset-md-1 col-md-10">
             <div class="card my-5">
                 <div class="card-header">
-                    {{"Question "+currentQuestion}}
+                    {{"Question "+currentQuestionNumber}}
                 </div>
                 <div class="card-body">
-                    <h5 class="card-title">{{questionsArray[currentQuestion-1].question}}</h5>
-                    <div *ngFor="let option of questionsArray[currentQuestion-1].options; let i = index">
+                    <h5 class="card-title">{{question.question}}</h5>
+                    <div *ngFor="let option of question.options; let i = index;">
                         <div class="form-ckeck mx-5">
-                            <input type="radio" class="form-check-input" value="{{i}}" name="option" (change)="onAnswerChange($event.target.value)"> 
+                            <input type="radio" class="form-check-input" value="{{i}}" name="option"
+                                (change)="onAnswerChange($event.target.value)">
                             <label class="form-check-label">{{option}}</label>
                         </div>
                     </div>
                 </div>
-                <div class="card-footer text-right" *ngIf="currentQuestion < questionsArray.length; else finish">
-                    <button class="btn btn-primary" (click)="nextBtnClickEventHandler();" [disabled]="selectedAnswer<0?true:false">Next</button>
+                <div class="card-footer text-right" *ngIf="currentQuestionNumber < totalQuestions; else finish">
+                    <button class="btn btn-primary" (click)="nextBtnClickEventHandler();"
+                        [disabled]="selectedAnswer<0?true:false">Next</button>
                 </div>
                 <ng-template #finish>
-                <div class="card-footer text-right">
-                    <button class="btn btn-primary" (click)="finishBtnClickEventHandler();" [disabled]="selectedAnswer<0?true:false">Finish</button>
-                </div>
+                    <div class="card-footer text-right">
+                        <button class="btn btn-primary" (click)="finishBtnClickEventHandler();"
+                            [disabled]="selectedAnswer<0?true:false">Finish</button>
+                    </div>
                 </ng-template>
             </div>
         </div>
