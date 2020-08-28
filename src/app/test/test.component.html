@@ -9,9 +9,9 @@
                     <h5 class="card-title">{{question.question}}</h5>
                     <div *ngFor="let option of question.options; let i = index;">
                         <div class="form-ckeck mx-5">
-                            <input type="radio" class="form-check-input" value="{{i}}" name="option"
+                            <input type="radio" id="{{i}}" class="form-check-input" value="{{i}}" name="option"
                                 (change)="onAnswerChange($event.target.value)">
-                            <label class="form-check-label">{{option}}</label>
+                            <label class="form-check-label" for="{{i}}">{{option}}</label>
                         </div>
                     </div>
                 </div>

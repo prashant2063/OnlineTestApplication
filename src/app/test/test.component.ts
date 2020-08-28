@@ -17,7 +17,7 @@ export class TestComponent implements OnInit {
 
   constructor(public router: Router, public manageTestService: ManageTestService) {
     this.currentQuestionNumber = 1;
-    this.question = this.manageTestService.getQuestionById(this.currentQuestionNumber);
+    this.question = this.manageTestService.getQuestionById(this.manageTestService.getFirstQId());
     this.selectedAnswer = -1;
     this.totalQuestions = this.manageTestService.getTotalQuestions();
   }

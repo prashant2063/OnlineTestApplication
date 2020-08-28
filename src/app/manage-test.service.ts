@@ -4,15 +4,15 @@ import { Question } from './question';
 @Injectable()
 export class ManageTestService {
 
-  questionsArray: Array<Question> = new Array();
-  selectedAnswers: Object;
+  private questionsArray: Array<Question> = new Array();
+  private selectedAnswers: Object;
 
   constructor() {
     this.questionsArray.push(new Question(1, "WWW stands for ?", ["World Whole Web", "Wide World Web", "Web World Wide", "World Wide Web"], "World Wide Web"));
     this.questionsArray.push(new Question(2, "Which of the following are components of Central Processing Unit (CPU) ?", ["Arithmetic logic unit, Mouse", "Arithmetic logic unit, Control unit", "Arithmetic logic unit, Integrated Circuits", "Control Unit, Monitor"], "Arithmetic logic unit, Control unit"));
     this.questionsArray.push(new Question(3, "Which among following first generation of computers had ?", ["Vaccum Tubes and Magnetic Drum", "Integrated Circuits", "Magnetic Tape and Transistors", "All of above"], "Vaccum Tubes and Magnetic Drum"));
     this.questionsArray.push(new Question(4, "Where is RAM located ?", ["Expansion Board", "External Drive", "Mother Board", "All of above"], "Mother Board"));
-    this.questionsArray.push(new Question(5, "If a computer has more than one processor then it is known as ?", ["Uniprocess", "Multiprocessor", "Multithreaded", "Multiprogramming"], "Uniprocess"));
+    this.questionsArray.push(new Question(5, "If a computer has more than one processor then it is known as ?", ["Uniprocess", "Multiprocessor", "Multithreaded", "Multiprogramming"], "Multiprocessor"));
     this.questionsArray.push(new Question(6, "If a computer provides database services to other, then it will be known as ?", ["Web server", "Application server", "Database server", "FTP server"], "Database server"));
     this.questionsArray.push(new Question(7, "Full form of URL is ?", ["Uniform Resource Locator", "Uniform Resource Link", "Uniform Registered Link", "Unified Resource Link"], "Uniform Resource Locator"));
     this.questionsArray.push(new Question(8, "In which of the following form, data is stored in computer ?", ["Decimal", "Binary", "HexaDecimal", "Octal"], "Binary"));
@@ -30,8 +30,8 @@ export class ManageTestService {
     }
   }
 
-  getAllQuestion() {
-    return this.questionsArray;
+  getFirstQId(){
+    return this.questionsArray[0].qId;
   }
 
   getQuestionById(id: number) {
